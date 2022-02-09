@@ -3,7 +3,7 @@ package staff;
 public class Employee {
     public String name;
     private String niNumber;
-    private int salary;
+    public  int salary;
 
     public Employee(String name, String niNumber, int salary){
         this.name = name;
