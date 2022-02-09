@@ -1,7 +1,7 @@
 package staff;
 
 public class Employee {
-    private String name;
+    public String name;
     private String niNumber;
     private int salary;
 
@@ -20,11 +20,24 @@ public class Employee {
     public int getSalary(){
         return this.salary;
     }
-    public void raiseSalary(Double increase) {
-        this.salary *=increase;
+
+    public String  raiseSalary(Double increase) {
+        if(increase < 0){
+            return "can not enter negative value";
+        }
+        this.salary *= increase;
+        return null;
     }
 
     public int payBonus(){
         return (this.salary / 100);
+    }
+
+    public String inputName(String newName){
+        if(newName == ""){
+            return "can't be empty";
+        }
+        this.name = newName;
+        return null;
     }
 }

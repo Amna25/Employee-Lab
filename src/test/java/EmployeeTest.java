@@ -36,5 +36,20 @@ public class EmployeeTest {
         assertEquals(250, employee.payBonus());
 
     }
+    @Test
+    public void getNegativeSalary(){
 
+        assertEquals("can not enter negative value", employee.raiseSalary(-1.1));
+    }
+
+    @Test
+    public void testEmptyName(){
+        assertEquals("can't be empty", employee.inputName(""));
+    }
+
+    @Test
+    public void testName(){
+        employee.inputName("Tom");
+        assertEquals("Tom", employee.name);
+    }
 }
